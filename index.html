@@ -15,10 +15,19 @@
     margin: 20px; /* Add some margin for better readability */
   }
   .flicker {
-    animation: blinker 1s linear infinite;
+    animation: blinker 0.5s step-end infinite; /* Adjusted animation */
   }
   @keyframes blinker {
+    0% {
+      opacity: 1;
+    }
     50% {
+      opacity: 1;
+    }
+    51% {
+      opacity: 0;
+    }
+    100% {
       opacity: 0;
     }
   }
